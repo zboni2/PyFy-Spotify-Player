@@ -1,7 +1,10 @@
-# Pyfy - Spotify Player
+# 🎵 Pyfy - Spotify Player
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A lightweight, customizable Spotify player built with Python and Tkinter. Control your Spotify playback with a simple and intuitive interface.
 
+[![Download Latest Release](https://img.shields.io/badge/Download-Latest%20Release-brightgreen?style=for-the-badge&logo=github)](https://github.com/zboni2/PyFy-Spotify-Player/releases/latest)
 
 ## Features
 
@@ -24,7 +27,7 @@ Before using Pyfy, you'll need:
 
 ### For End Users
 
-1. Download the latest `Pyfy.exe` from the [releases page](https://github.com/your-username/pyfy/releases)
+1. Download the latest `Pyfy.exe` from the [releases page](https://github.com/zboni2/PyFy-Spotify-Player/releases)
 2. Run the executable
 3. The first time you run it, you'll be redirected to Spotify's authorization page
 4. Log in to your Spotify account and approve the permissions
@@ -32,18 +35,18 @@ Before using Pyfy, you'll need:
 
 ### For Developers
 
-### Prerequisites
+#### Prerequisites
 
 - Python 3.8 or higher
 - pip (Python package manager)
 - Git (for version control)
 
-### Setting Up the Development Environment
+#### Setting Up the Development Environment
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/pyfy.git
-   cd pyfy
+   git clone https://github.com/zboni2/PyFy-Spotify-Player.git
+   cd PyFy-Spotify-Player
    ```
 
 2. **Create and activate a virtual environment** (recommended)
