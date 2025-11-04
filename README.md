@@ -20,8 +20,24 @@
 
 ## Quick Start
 
+### Prerequisites
+1. **Spotify Premium** account
+2. **Spotify Desktop** app installed and running
+3. **.env file** with your Spotify API credentials (see setup below)
+
+### Setup .env File
+1. Create a file named `.env` in the same folder as the executable
+2. Add your Spotify API credentials:
+   ```
+   SPOTIPY_CLIENT_ID=your_client_id_here
+   SPOTIPY_CLIENT_SECRET=your_client_secret_here
+   SPOTIPY_REDIRECT_URI=http://127.0.0.1:8888/callback
+   ```
+3. Save the file
+
+### Running the Application
 1. **Download** the latest [Pyfy.exe](https://github.com/zboni2/PyFy-Spotify-Player/releases/latest/download/Pyfy.exe)
-2. **Run** the executable (make sure Spotify Desktop is running)
+2. **Run** the executable
 3. **Authorize** with your Spotify account when prompted
 4. **Enjoy** controlling your music!
 

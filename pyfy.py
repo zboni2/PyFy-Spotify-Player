@@ -16,15 +16,31 @@ SPOTIPY_CLIENT_ID = os.getenv('SPOTIPY_CLIENT_ID')
 SPOTIPY_CLIENT_SECRET = os.getenv('SPOTIPY_CLIENT_SECRET')
 SPOTIPY_REDIRECT_URI = os.getenv('SPOTIPY_REDIRECT_URI')
 
+# Show an error message in a dialog and exit
+def show_error_and_exit(message):
+    try:
+        import tkinter as tk
+        from tkinter import messagebox
+        root = tk.Tk()
+        root.withdraw()  # Hide the root window
+        messagebox.showerror("Error", message)
+        root.destroy()
+    except Exception as e:
+        print(f"Error: {message}")
+        print(f"Additional error showing dialog: {str(e)}")
+    finally:
+        sys.exit(1)
+
 # Validate credentials
 if not all([SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET, SPOTIPY_REDIRECT_URI]):
-    print("Error: Missing Spotify API credentials in .env file")
-    print("Please create a .env file with the following variables:")
-    print("SPOTIPY_CLIENT_ID=your_client_id")
-    print("SPOTIPY_CLIENT_SECRET=your_client_secret")
-    print("SPOTIPY_REDIRECT_URI=your_redirect_uri")
-    input("Press Enter to exit...")
-    sys.exit(1)
+    error_msg = (
+        "Missing Spotify API credentials in .env file\n\n"
+        "Please create a .env file with the following variables:\n"
+        "SPOTIPY_CLIENT_ID=your_client_id\n"
+        "SPOTIPY_CLIENT_SECRET=your_client_secret\n"
+        "SPOTIPY_REDIRECT_URI=your_redirect_uri"
+    )
+    show_error_and_exit(error_msg)
 
 class SpotifyPlayer:
     def __init__(self, root):
